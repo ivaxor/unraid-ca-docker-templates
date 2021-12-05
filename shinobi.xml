@@ -1,0 +1,71 @@
+
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Shinobi</Name>
+  <Repository>ivaxor/shinobi:latest</Repository>
+  <Registry>https://registry.hub.docker.com/u/ivaxor/shinobi</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <!-- <Support>https://forums.unraid.net/topic/***</Support> -->
+  <Project>https://gitlab.com/Shinobi-Systems/Shinobi</Project>
+  <Overview>Shinobi Pro - The Next Generation in Open-Source Video Management Software with support for over 6000 IP and USB Cameras</Overview>
+  <Category>Downloaders</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/ivaxor/unraid-ca-docker-templates/blob/main/shinobi.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Shinobi Pro - The Next Generation in Open-Source Video Management Software with support for over 6000 IP and USB Cameras</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <ContainerDir>/home/Shinobi/videos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>    
+    <Volume>
+      <ContainerDir>/home/Shinobi/libs/customAutoLoad</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/home/Shinobi/plugins</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <HostDir>/etc/localtime</HostDir>      
+      <Mode>r</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="GUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always-hide" Required="true" Mask="false">8080</Config>
+  <Config Name="Videos" Target="/home/Shinobi/videos" Default="/mnt/user/appdata/shinobi/videos" Mode="rw" Description="Container Path: /home/Shinobi/videos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/shinobi/videos</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/shinobi/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/shinobi/config</Config>  
+  <Config Name="Custom auto load libs" Target="/home/Shinobi/libs/customAutoLoad" Default="/mnt/user/appdata/shinobi/libs" Mode="rw" Description="Container Path: /home/Shinobi/libs/customAutoLoad" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/shinobi/libs</Config>  
+  <Config Name="MySQL" Target="/var/lib/mysql" Default="/mnt/user/appdata/shinobi/mysql" Mode="rw" Description="Container Path: /var/lib/mysql" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/shinobi/mysql</Config>  
+  <Config Name="Plugins" Target="/home/Shinobi/plugins" Default="/mnt/user/appdata/shinobi/plugins" Mode="rw" Description="Container Path: /home/Shinobi/plugins" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/shinobi/plugins</Config>  
+  <Config Name="Localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="r" Description="Container Path: /etc/localtime" Type="Path" Display="always-hide" Required="true" Mask="false">/etc/localtime</Config>  
+</Container>
