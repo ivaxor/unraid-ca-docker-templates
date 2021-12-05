@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Maintainer>
-  <Icon>https://github.com/ivaxor.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ivaxor/press-assets-information/master/icons/logo.png</Icon>
   <Profile>IVAXOR</Profile>
-  <DonateLink>https://github.com/users/ivaxor/sponsorship</DonateLink>
+  <DonateLink>https://github.com/sponsors/ivaxor</DonateLink>
   <DonateText>Sponsor me if you like my work!</DonateText>
 </Maintainer>
