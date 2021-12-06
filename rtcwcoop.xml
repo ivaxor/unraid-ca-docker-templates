@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RTCWCoop</Name>
+  <Repository>ivaxor/rtcwcoop:latest</Repository>
+  <Registry>https://registry.hub.docker.com/u/ivaxor/rtcwcoop</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <!-- <Support>https://forums.unraid.net/topic/***</Support> -->
+  <Project>https://www.rtcwcoop.com</Project>
+  <Overview>A Return to Castle Wolfenstein modification which enables cooperative gameplay, based on iortcw</Overview>
+  <Category>GameServers</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ivaxor/unraid-ca-docker-templates/main/rtcwcoop.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A Return to Castle Wolfenstein modification which enables cooperative gameplay, based on iortcw</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>27960</HostPort>
+        <ContainerPort>27960</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <ContainerDir>/home/Shinobi/videos</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Game" Target="27960" Default="" Mode="udp" Description="Container Port: 27960" Type="Port" Display="always-hide" Required="true" Mask="false">27960</Config>
+  <Config Name="RTCW" Target="/root/.wolf/main" Default="/mnt/user/appdata/rtcwcoop" Mode="rw" Description="Container Path: /root/.wolf/main" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rtcwcoop</Config>
+</Container>
