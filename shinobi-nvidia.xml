@@ -10,8 +10,8 @@
   <!-- <Support>https://forums.unraid.net/topic/***</Support> -->
   <Project>https://gitlab.com/Shinobi-Systems/Shinobi</Project>
   <Overview>Shinobi Pro - The Next Generation in Open-Source Video Management Software with support for over 6000 IP and USB Cameras</Overview>
-  <Category>Downloaders</Category>
-  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Category>HomeAutomation</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ivaxor/unraid-ca-docker-templates/main/shinobi.png</Icon>
   <ExtraParams/>
