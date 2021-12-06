@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Shinobi (nvidia)</Name>
+  <Name>Shinobi nvidia</Name>
   <Repository>ivaxor/shinobi:latest-nvidia</Repository>
   <Registry>https://registry.hub.docker.com/u/ivaxor/shinobi</Registry>
   <Network>bridge</Network>
