@@ -13,14 +13,14 @@
   <Category>Downloaders</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL/>
-  <Icon>https://github.com/ivaxor/unraid-ca-docker-templates/blob/main/shinobi.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ivaxor/unraid-ca-docker-templates/main/shinobi.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Description>Shinobi Pro - The Next Generation in Open-Source Video Management Software with support for over 6000 IP and USB Cameras</Description>
+  <Description>Shinobi Pro with Nvidia support - The Next Generation in Open-Source Video Management Software with support for over 6000 IP and USB Cameras</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
