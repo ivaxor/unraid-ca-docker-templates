@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>RTCWCoop</Name>
-  <Repository>ivaxor/rtcwcoop:latest</Repository>
+  <Repository>ivaxor/rtcwcoop:1.0.2</Repository>
   <Registry>https://registry.hub.docker.com/u/ivaxor/rtcwcoop</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -9,13 +9,18 @@
   <Privileged>false</Privileged>
   <!-- <Support>https://forums.unraid.net/topic/***</Support> -->
   <Project>https://www.rtcwcoop.com</Project>
-  <Overview>A Return to Castle Wolfenstein modification which enables cooperative gameplay, based on iortcw</Overview>
+  <Overview>
+    A Return to Castle Wolfenstein modification which enables cooperative gameplay, based on iortcw.&#xD;
+    To run this you need legitimate copy of RTCW and RealRTCW from Steam.&#xD;
+    Copy all *.pk3 files from RTCW and RealRTCW to corresponding folders.&#xD;
+    If your server aren't visible in server browser - try to add [b]+net_ip [YOUR_IP] +net_port 27960[b] to [b]Post Arguments[b].
+  </Overview>
   <Category>GameServers</Category>
   <WebUI/>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ivaxor/unraid-ca-docker-templates/main/rtcwcoop.png</Icon>
   <ExtraParams/>
-  <PostArgs/>
+  <PostArgs>+set dedicated 2 +map swf +set fs_homepath "/home/rtcw"</PostArgs>
   <CPUset/>
   <DateInstalled/>
   <DonateText/>
@@ -33,12 +38,17 @@
   </Networking>
   <Data>
     <Volume>
-      <ContainerDir>/home/Shinobi/videos</ContainerDir>
+      <ContainerDir>/home/rtcw/main</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <ContainerDir>/home/rtcw/coopmain</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
   <Config Name="Game" Target="27960" Default="" Mode="udp" Description="Container Port: 27960" Type="Port" Display="always-hide" Required="true" Mask="false">27960</Config>
-  <Config Name="RTCW" Target="/root/.wolf/main" Default="/mnt/user/appdata/rtcwcoop" Mode="rw" Description="Container Path: /root/.wolf/main" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rtcwcoop</Config>
+  <Config Name="RTCW" Target="/home/rtcw/main" Default="/mnt/user/appdata/rtcw/main" Mode="rw" Description="Folder with RTCW/Main/*.pk3 files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rtcw/main</Config>
+  <Config Name="RealRTCW" Target="/home/rtcw/coopmain" Default="/mnt/user/appdata/rtcw/coopmain" Mode="rw" Description="Folder with RealRTCW/coop/coopmain/*.pk3 files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rtcw/coopmain</Config>
 </Container>
